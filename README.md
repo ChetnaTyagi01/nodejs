@@ -10,17 +10,19 @@ once installed check the setup by running below command
 
 npm - node package manager
 - https://www.npmjs.com/package/package
-- an online repository for the publishing of open-source Node. js projects; second
+- an online repository for the publishing of open-source Node. js projects
 - a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management
 
-check version of npm(node package manager) by running below command
+check version of npm by running below command
  - npm -v
+
 initialize npm from the root of the project by running below command
  - npm init - this will create a configuration file which we can use to manage all the dependencies from the npm
+
 to install npm package run below command
- - npm install <package-name> OR npm i <package-name> - this installs latest version of the package
- - npm install <package-name>@<package-version> - to install package with a specific version
- - npm install <package-name>@<package-version> -g - installs the module globally
+ - npm install package-name OR npm i package-name - this installs latest version of the package
+ - npm install package-name@package-version - to install package with a specific version
+ - npm install package-name@package-version -g - installs the module globally
 
 node_modules 
 - folder that contains code for all the dependencies we install
