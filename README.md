@@ -48,17 +48,18 @@ nodemon
 
 # Getting input from users
   when we run the below command 
-  - node app.js sometext
-  -- here 'sometext' can be fetched in code by using process.args
-  -- process - is a global object that can be accessed inside any module without requiring it
-  -- argv - argument vector - is an array that contains all the arguments provided
+  node app.js sometext
+  - here 'sometext' can be fetched in code by using process.args
+  - process - is a global object that can be accessed inside any module without requiring it
+  - argv - argument vector - is an array that contains all the arguments provided
 
-  - node app.js sometext1 sometext2
-  -- both sometext1 and sometext2 will be accessible in array argv
+  node app.js sometext1 sometext2
+  - both sometext1 and sometext2 will be accessible in array argv
 
-  - example : running the below command -
-    -- node app.js add --title="This is my title"
-    -- returns the below output -
+  example : running the below command -
+  - node app.js add --title="This is my title"
+  - returns the below output -
+        
         [
         'C:\\Program Files\\nodejs\\node.exe',
         'C:\\Users\\tyache01\\Downloads\\git\\nodejs\\notes-app\\app.js',
