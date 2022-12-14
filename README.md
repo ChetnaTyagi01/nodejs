@@ -1,5 +1,4 @@
 # nodejs
-just for practice
 
 install node.js on your system
 - https://nodejs.org/en/
@@ -45,3 +44,26 @@ package-lock.json
 nodemon
 - npm package that restarts the node application whenever it observes the changes in the file present in the working directory of your project.
 
+# Getting input from users
+  when we run the below command 
+  - node app.js sometext
+  here 'sometext' can be fetched in code by using process.args
+  process - is a global object that can be accessed inside any module without requiring it
+  argv - argument vector - is an array that contains all the arguments provided
+
+  - node app.js sometext1 sometext2
+  both sometext1 and sometext2 will be accessible in array argv
+
+  - example : running the below command -
+    node app.js add --title="This is my title"
+  returns the below output -
+    [
+    'C:\\Program Files\\nodejs\\node.exe',
+    'C:\\Users\\tyache01\\Downloads\\git\\nodejs\\notes-app\\app.js',
+    'add',
+    '--title=This is my title'
+    ]
+
+  - nodejs doesn't provide any argument parsing. It only allows us to access just the raw arguments.
+
+  - yargs - npm package - parses the raw arguments so that they can be easily accesed.
