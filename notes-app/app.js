@@ -4,7 +4,8 @@
 // fs.appendFileSync('notes.txt', ' This is nodejs hands-on project.')
 
 // const utils = require('./utils.js') // runs utils.js
-const getNotes = require('./notes.js')
+// const getNotes = require('./notes.js')
+const notes = require('./notes.js')
 const validator = require('validator')
 const chalk = require('chalk')
 const yargs = require('yargs')
@@ -52,7 +53,7 @@ const { string } = require('yargs')
 yargs.command({
     command: 'add',
     describe: 'Add a new note',
-    builder: {
+    builder: { // use builder to setup multiple command line options
         title: {
             describe: 'Note title',
             demandOption: true, // required to be provided at command line in order for the command to work correctly
@@ -66,8 +67,9 @@ yargs.command({
     },
     handler: function (argv) {
         // console.log('Adding a new note!', argv)
-        console.log('Title: ' + argv.title)
-        console.log('Body: ' + argv.body)
+        // console.log('Title: ' + argv.title)
+        // console.log('Body: ' + argv.body)
+        notes.addNote(argv.title, argv.body)
     }
 })
 
@@ -75,8 +77,16 @@ yargs.command({
 yargs.command({
     command: 'remove',
     describe: 'Remove a note',
-    handler: function () {
-        console.log('Removing the note!')
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler: function (argv) {
+        // console.log('Removing the note!')
+        notes.removeNote(argv.title)
     }
 })
 
