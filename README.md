@@ -72,4 +72,12 @@ nodemon
   - yargs - npm package - parses the raw arguments so that they can be easily accesed.
 
 
-  
+   * /notes-app
+
+   - To add a note - node app.js add --title="List" --body="Sweater, Pants"
+
+   - To remoe a note - node app.js remove --title="List"
+
+   - To list notes - node app.js list
+
+   - To read a note - node app.js read --title="List"
